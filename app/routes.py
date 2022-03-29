@@ -12,7 +12,7 @@ class LoginForm(FlaskForm):
     city = StringField('City Name', validators=[DataRequired()])
     submit = SubmitField('Submit')
 
-@myobj.route('/', method=['GET', 'POST'])
+@myobj.route('/', methods=['GET', 'POST'])
 def home():
     form = LoginForm()
     if form.validate_on_submit:
