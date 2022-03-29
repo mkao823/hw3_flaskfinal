@@ -1,3 +1,4 @@
+from crypt import methods
 from app import myobj
 from flask import render_template, flash
 from flask_wtf import FlaskForm
