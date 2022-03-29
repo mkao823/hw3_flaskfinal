@@ -27,5 +27,3 @@ def home():
     """
 
     return output
-myapp_obj.run()
-
