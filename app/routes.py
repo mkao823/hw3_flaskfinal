@@ -1,4 +1,3 @@
-from crypt import methods
 from app import myobj
 from flask import render_template, flash
 from flask_wtf import FlaskForm
@@ -13,7 +12,7 @@ class LoginForm(FlaskForm):
     city = StringField('City Name', validators=[DataRequired()])
     submit = SubmitField('Submit')
 
-@myobj.route('/', methods=['GET', 'POST'])
+@myobj.route('/', method=['GET', 'POST'])
 def home():
     form = LoginForm()
     if form.validate_on_submit:
