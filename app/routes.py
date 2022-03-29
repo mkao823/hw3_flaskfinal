@@ -5,7 +5,7 @@ from wtforms.validators import DataRequired
 from wtforms import StringField, SubmitField
 
 
-#name = 'Lisa'
+name = 'Lisa'
 city_names = ['Paris', 'London', 'Rome', 'Tahiti']
 
 class LoginForm(FlaskForm):
@@ -18,6 +18,6 @@ def home():
     if form.validate_on_submit:
         flash(form.city.data)
         #print(f'{form.city.data}')
-    return render_template('home.html', name = 'Lisa', city_names = city_names, form = form)
+    return render_template('home.html', name = name, city_names = city_names, form = form)
     #home.html and name
 
